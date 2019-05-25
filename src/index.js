@@ -2,17 +2,33 @@ import readlineSync from 'readline-sync';
 
 import { car, cdr } from 'hexlet-pairs';
 
-export default (rules, gameDataGen) => {
-  console.log(`Welcome to the Brain Games!\n${rules}\n`);
-
-  const userName = readlineSync.question('May I have your name?\n');
+export const requestUserName = () => {
+  const userName = readlineSync.question('May I have your name?\n> ');
   console.log(`\nHello, ${userName}!\n`);
+  return userName;
+};
 
-  const scoresToWin = 3;
+export const greeting = (userName) => {
+  const text = 'Welcome to the Brain Games';
+  const result = userName === undefined ? `${text}!` : `${text}, ${userName}!\n`;
+  console.clear();
+  console.log(result);
+};
 
-  let scores = 0;
-  while (scores < scoresToWin) {
-    const gameData = gameDataGen();
+export const showGameResult = (game, userName) => {
+  if (game === true) {
+    console.log(`Congratulations, ${userName}!\n`);
+  } else {
+    console.log(`Let's try again, ${userName}!\n`);
+  }
+};
+
+export const engine = (game) => {
+  const rules = car(game);
+  console.log(`${rules}\n`);
+
+  for (let scores = 0; scores < 3;) {
+    const gameData = cdr(game)();
 
     const question = car(gameData);
     const rightAnswer = cdr(gameData);
@@ -24,13 +40,8 @@ export default (rules, gameDataGen) => {
       scores += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\n`);
-      break;
+      return false;
     }
   }
-
-  if (scores === scoresToWin) {
-    console.log(`Congratulations, ${userName}!`);
-  } else {
-    console.log(`Let's try again, ${userName}!`);
-  }
+  return true;
 };

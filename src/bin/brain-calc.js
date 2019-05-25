@@ -1,6 +1,10 @@
 #!/usr/bin/env node
-import engine from '..';
-import brainCalc, { rules } from '../brain-calc-module';
+import {
+  engine, greeting, showGameResult, requestUserName,
+} from '..';
 
-console.clear();
-engine(rules, brainCalc);
+import gameModule from '../games-modules/brain-calc-module';
+
+greeting();
+const userName = requestUserName();
+showGameResult(engine(gameModule), userName);

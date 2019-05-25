@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import session from '../launcher';
+import { greeting, requestUserName } from '..';
 
-console.clear();
-console.log('Welcome to the Brain Games!');
+greeting();
+const userName = requestUserName();
 
-const userName = readlineSync.question('May I have your name?\n');
-console.log(`\nHello, ${userName}!\n`);
+while (session(userName) !== false) {
+  readlineSync.keyInPause('Press any key to return to main menu...');
+  greeting(userName);
+}

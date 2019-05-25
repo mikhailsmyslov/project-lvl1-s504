@@ -3,7 +3,7 @@ import {
   engine, greeting, showGameResult, requestUserName,
 } from '..';
 
-import gameModule from '../games-modules/brain-even-module';
+import gameModule from '../games-modules/brain-gcd-module';
 
 greeting();
 const userName = requestUserName();

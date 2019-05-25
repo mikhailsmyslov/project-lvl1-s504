@@ -11,13 +11,18 @@ My first project on [Hexlet](https://ru.hexlet.io)
 
 ### Installation
 `npm install brain-games-s504 -g`
-[![asciicast](https://asciinema.org/a/CM5tSzKiYhljWNWti5VzlYX0H.svg)](https://asciinema.org/a/CM5tSzKiYhljWNWti5VzlYX0H)
+[![asciicast](https://asciinema.org/a/5xxnUPMvFUOvRKvUNOsVmmvKB.svg)](https://asciinema.org/a/5xxnUPMvFUOvRKvUNOsVmmvKB)
 
 ### Playing
-[![asciicast](https://asciinema.org/a/PIYVWApvTqUtIr3H44OouuUcP.svg)](https://asciinema.org/a/PIYVWApvTqUtIr3H44OouuUcP)
+`brain-games` - runs the main menu to choose a game.
+You can also launch games without the main menu by using `brain-even`, `brain-calc`, `brain-gcd`.
+
+[![asciicast](https://asciinema.org/a/2aonhj9No3Vy6UcN1xnlu6aMV.svg)](https://asciinema.org/a/2aonhj9No3Vy6UcN1xnlu6aMV)
 
 ### History
 - 1.0.0 - Original;
 - 1.1.0 - User name input added;
 - 1.2.0 - brain-even game added;
-- 1.3.0 - brain-calc game added;
+- 1.3.0 - brain-calc game added;-
+- 2.0.0 - Modified architecture and modules organization, brain-gcd game added, main menu added;
+- 2.0.1 - Minor corrections;
