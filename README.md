@@ -9,8 +9,12 @@ ______________________
 ### About
 My first project on [Hexlet](https://ru.hexlet.io)
 
-### Install & Play
-[![asciicast](https://asciinema.org/a/QssSp9ZwTzu6bpbe0LziuLHMg.svg)](https://asciinema.org/a/QssSp9ZwTzu6bpbe0LziuLHMg)
+### Installation
+`npm install brain-games-s504 -g`
+[![asciicast](https://asciinema.org/a/CM5tSzKiYhljWNWti5VzlYX0H.svg)](https://asciinema.org/a/CM5tSzKiYhljWNWti5VzlYX0H)
+
+### Playing
+[![asciicast](https://asciinema.org/a/PIYVWApvTqUtIr3H44OouuUcP.svg)](https://asciinema.org/a/PIYVWApvTqUtIr3H44OouuUcP)
 
 ### History
 - 1.0.0 - Original;

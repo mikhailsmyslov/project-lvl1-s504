@@ -1,23 +1,11 @@
-import readlineSync from 'readline-sync';
-
 import random from 'lodash.random';
+import { cons } from 'hexlet-pairs';
 
-import { gameOver, wonTheGame } from '.';
+export const rules = 'Answer "yes" if number even otherwise answer "no".';
 
-export default (userName) => {
-  let rightAnswers = 0;
-  while (rightAnswers < 3) {
-    const cValue = random(1, 99);
-    const answer = readlineSync.question(`Is ${cValue} an even number?\n`);
-    const rightAnswer = cValue % 2 === 0 ? 'yes' : 'no';
-    console.log(`Your answer is: ${answer}`);
-    if (answer === rightAnswer) {
-      console.log('Correct!\n');
-      rightAnswers += 1;
-    } else {
-      gameOver(answer, rightAnswer, userName);
-      return;
-    }
-  }
-  wonTheGame(userName);
+export default () => {
+  const cValue = random(1, 99);
+  const question = `Is ${cValue} an even number?`;
+  const rightAnswer = cValue % 2 === 0 ? 'yes' : 'no';
+  return cons(question, rightAnswer);
 };
