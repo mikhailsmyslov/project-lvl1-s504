@@ -20,3 +20,4 @@ My first project on [Hexlet](https://ru.hexlet.io)
 - 1.0.0 - Original;
 - 1.1.0 - User name input added;
 - 1.2.0 - brain-even game added;
+- 1.3.0 - brain-calc game added;
