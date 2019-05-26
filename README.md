@@ -15,7 +15,7 @@ My first project on [Hexlet](https://ru.hexlet.io)
 
 ### Playing
 `brain-games` - runs the main menu to choose a game.
-You can also launch games without the main menu by using `brain-even`, `brain-calc`, `brain-gcd`.
+You can also launch games without the main menu by using `brain-even`, `brain-calc`, `brain-gcd`, `brain-prog`, `brain-prime`.
 
 [![asciicast](https://asciinema.org/a/2aonhj9No3Vy6UcN1xnlu6aMV.svg)](https://asciinema.org/a/2aonhj9No3Vy6UcN1xnlu6aMV)
 
@@ -27,4 +27,5 @@ You can also launch games without the main menu by using `brain-even`, `brain-ca
 - 2.0.0 - Modified architecture and modules organization, brain-gcd game added, main menu added;
 - 2.0.1 - Minor corrections;
 - 2.1.1 - brain-progression game added and some code optimization done;
-- 2.0.2 - Minor corrections;
+- 2.1.2 - Minor corrections;
+- 2.2.2 - brain-prime game added and some code optimization done;

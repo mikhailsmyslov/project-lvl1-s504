@@ -11,13 +11,12 @@ const game = () => {
     const b = random(50, 99);
     const question = `What is the GSD for ${a} and ${b}?`;
 
-    const noMod = (div, x, y) => x % div === 0 && y % div === 0;
-    const minNum = Math.min(a, b);
+    let i = Math.min(a, b);
 
-    for (let i = minNum; i > 1; i -= 1) {
-      if (noMod(i, a, b)) return cons(question, String(i));
+    for (i; i > 1; i -= 1) {
+      if (a % i === 0 && b % i === 0) break;
     }
-    return cons(question, '1');
+    return cons(question, String(i));
   };
 
   // Logics description END

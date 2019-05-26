@@ -8,6 +8,7 @@ import brainEven from './games-modules/brain-even-module';
 import brainCalc from './games-modules/brain-calc-module';
 import brainGSD from './games-modules/brain-gcd-module';
 import brainProg from './games-modules/brain-progression-module';
+import brainPrime from './games-modules/brain-prime-module';
 
 export default (userName) => {
   const games = {
@@ -15,6 +16,7 @@ export default (userName) => {
     'Calculate expression': brainCalc,
     'Greater Common Divider': brainGSD,
     'Arithmetic progression': brainProg,
+    'Prime numbers': brainPrime,
   };
 
   const availableGames = Object.keys(games);
