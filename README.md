@@ -30,3 +30,4 @@ You can also launch games without the main menu by using `brain-even`, `brain-ca
 - 2.1.2 - Minor corrections;
 - 2.2.2 - brain-prime game added and some code optimization done;
 - 2.2.3 - refactoring;
+- 2.2.4 - readme updated;
