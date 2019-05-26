@@ -26,3 +26,5 @@ You can also launch games without the main menu by using `brain-even`, `brain-ca
 - 1.3.0 - brain-calc game added;-
 - 2.0.0 - Modified architecture and modules organization, brain-gcd game added, main menu added;
 - 2.0.1 - Minor corrections;
+- 2.1.1 - brain-progression game added and some code optimization done;
+- 2.0.2 - Minor corrections;

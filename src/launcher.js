@@ -7,12 +7,14 @@ import {
 import brainEven from './games-modules/brain-even-module';
 import brainCalc from './games-modules/brain-calc-module';
 import brainGSD from './games-modules/brain-gcd-module';
+import brainProg from './games-modules/brain-progression-module';
 
 export default (userName) => {
   const games = {
     'Is even?': brainEven,
     'Calculate expression': brainCalc,
     'Greater Common Divider': brainGSD,
+    'Arithmetic progression': brainProg,
   };
 
   const availableGames = Object.keys(games);

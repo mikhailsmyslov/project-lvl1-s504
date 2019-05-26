@@ -7,22 +7,17 @@ const game = () => {
   // Logics description BEGIN
 
   const logics = () => {
-    const a = random(1, 99);
-    const b = random(1, 99);
+    const a = random(2, 50);
+    const b = random(50, 99);
     const question = `What is the GSD for ${a} and ${b}?`;
 
+    const noMod = (div, x, y) => x % div === 0 && y % div === 0;
     const minNum = Math.min(a, b);
-    const maxNum = Math.max(a, b);
 
-    if (maxNum % minNum === 0) return cons(question, String(minNum));
-    let rightAnswer = 1;
-    for (let cGCD = Math.round(minNum / 2); cGCD > 1; cGCD -= 1) {
-      if ((minNum % cGCD === 0) && (maxNum % cGCD === 0)) {
-        rightAnswer = cGCD;
-        break;
-      }
+    for (let i = minNum; i > 1; i -= 1) {
+      if (noMod(i, a, b)) return cons(question, String(i));
     }
-    return cons(question, String(rightAnswer));
+    return cons(question, '1');
   };
 
   // Logics description END
