@@ -1,16 +1,25 @@
 import readLineSync from 'readline-sync';
 
-import {
-  engine, showGameResult,
-} from '.';
+import brainEven from './games/even';
+import brainCalc from './games/calc';
+import brainGSD from './games/gcd';
+import brainProg from './games/prog';
+import brainPrime from './games/prime';
+import { showGreeting } from '.';
 
-import brainEven from './games-modules/brain-even-module';
-import brainCalc from './games-modules/brain-calc-module';
-import brainGSD from './games-modules/brain-gcd-module';
-import brainProg from './games-modules/brain-progression-module';
-import brainPrime from './games-modules/brain-prime-module';
+const launchGame = (userNameParameter) => {
+  showGreeting(userNameParameter, 'main');
 
-export default (userName) => {
+  /* The next block is completely copied and pasted from Index.js.
+    Believe it's better to wrap it with function.
+    BEGIN */
+  let userName = userNameParameter;
+  if (userNameParameter === undefined) {
+    userName = readLineSync.question('May I have your name?\n> ');
+    console.log(`\nHello, ${userName}!\n`);
+  }
+  // END
+
   const games = {
     'Is even?': brainEven,
     'Calculate expression': brainCalc,
@@ -19,16 +28,19 @@ export default (userName) => {
     'Prime numbers': brainPrime,
   };
 
-  const availableGames = Object.keys(games);
+  const gameNames = Object.keys(games);
 
-  const choice = readLineSync.keyInSelect(availableGames, 'Please, choose a game to play: ');
-  const chosenGame = availableGames[choice];
+  const choice = readLineSync.keyInSelect(gameNames, 'Please, choose a game to play: ');
+  const chosenGame = gameNames[choice];
 
   if (chosenGame === undefined) {
     console.log(`Bye-Bye, ${userName}!`);
     return false;
   }
-  console.clear();
-  console.log(`Wellcome to the GAME, ${userName}!`);
-  return showGameResult(engine(games[chosenGame]), userName);
+
+  games[chosenGame](userName);
+  readLineSync.keyInPause('Press any key to continue');
+  return launchGame(userName);
 };
+
+export default launchGame;

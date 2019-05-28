@@ -1,10 +1,4 @@
 #!/usr/bin/env node
-import {
-  engine, greeting, showGameResult, requestUserName,
-} from '..';
+import startGame from '../games/gcd';
 
-import gameModule from '../games-modules/brain-gcd-module';
-
-greeting();
-const userName = requestUserName();
-showGameResult(engine(gameModule), userName);
+startGame();
