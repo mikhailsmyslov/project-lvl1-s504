@@ -4,19 +4,8 @@ import createGame from '..';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getGCD = (a, b) => {
-  const minNumber = Math.min(Math.abs(a), Math.abs(b));
-  const maxNumber = Math.max(Math.abs(a), Math.abs(b));
+const getGCD = (a, b) => (a !== 0 ? getGCD(b % a, a) : b);
 
-  if (maxNumber % minNumber === 0) return minNumber;
-
-  for (let divisor = Math.floor(minNumber); divisor > 1; divisor -= 1) {
-    if (maxNumber % divisor === 0 && minNumber % divisor === 0) {
-      return divisor;
-    }
-  }
-  return 1;
-};
 
 // Game data generator description BEGIN
 

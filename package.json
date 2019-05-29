@@ -2,7 +2,11 @@
   "name": "brain-games-s504",
   "version": "3.0.0",
   "description": "My first package",
-  "keywords": ["brain", "games", "Hexlet"],
+  "keywords": [
+    "brain",
+    "games",
+    "Hexlet"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
