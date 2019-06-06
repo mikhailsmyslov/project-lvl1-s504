@@ -36,3 +36,4 @@ You can also launch games without the main menu by using `brain-even`, `brain-ca
 - 2.2.4 - readme updated;
 - 2.2.5 - readme updated;
 - 3.0.0 - Architecture modified, corrections according to mentor's remarks;
+- 3.1.0 - corrections according to mentor's remarks;

@@ -19,15 +19,16 @@ const calculateExpression = (a, b, operand) => {
 
 
 const generateGameData = () => {
-  const a = random(1, 11);
-  const b = random(1, 11);
-  const operand = operands[random(0, 2)];
+  const a = random(10);
+  const b = random(10);
+  const operand = operands[random(operands.length - 1)];
 
+  const question = `${a} ${operand} ${b}`;
   const rightAnswer = calculateExpression(a, b, operand);
 
-  return cons(`${a} ${operand} ${b}`, String(rightAnswer));
+  return cons(question, String(rightAnswer));
 };
 
 // Game data generator description BEGIN
 
-export default createGame(description, generateGameData);
+export default userName => createGame(description, generateGameData, userName);

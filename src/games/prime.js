@@ -17,11 +17,11 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 // Game data generator description BEGIN
 
 const generateGameData = () => {
-  const number = random(0, 500);
-  const rightAnswer = isPrime(number) ? 'yes' : 'no';
-  return cons(number, rightAnswer);
+  const question = random(500);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
+  return cons(question, rightAnswer);
 };
 
 // Game data generator description END
 
-export default createGame(description, generateGameData);
+export default userName => createGame(description, generateGameData, userName);

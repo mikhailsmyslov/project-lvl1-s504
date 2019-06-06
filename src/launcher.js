@@ -3,44 +3,35 @@ import readLineSync from 'readline-sync';
 import brainEven from './games/even';
 import brainCalc from './games/calc';
 import brainGSD from './games/gcd';
-import brainProg from './games/prog';
+import brainProg from './games/progression';
 import brainPrime from './games/prime';
-import { showGreeting } from '.';
 
-const launchGame = (userNameParameter) => {
-  showGreeting(userNameParameter, 'main');
+const games = {
+  'Is even?': brainEven,
+  'Calculate expression': brainCalc,
+  'Greater Common Divider': brainGSD,
+  'Arithmetic progression': brainProg,
+  'Prime numbers': brainPrime,
+};
 
-  /* The next block is completely copied and pasted from Index.js.
-    Believe it's better to wrap it with function.
-    BEGIN */
-  let userName = userNameParameter;
-  if (userNameParameter === undefined) {
-    userName = readLineSync.question('May I have your name?\n> ');
-    console.log(`\nHello, ${userName}!\n`);
-  }
-  // END
+const gameNames = Object.keys(games);
 
-  const games = {
-    'Is even?': brainEven,
-    'Calculate expression': brainCalc,
-    'Greater Common Divider': brainGSD,
-    'Arithmetic progression': brainProg,
-    'Prime numbers': brainPrime,
-  };
+const launchGame = (userName) => {
+  if (userName !== undefined) readLineSync.keyInPause('Press any key to continue');
 
-  const gameNames = Object.keys(games);
+  console.clear();
+  console.log('Wellcome to the Brain Games!');
 
   const choice = readLineSync.keyInSelect(gameNames, 'Please, choose a game to play: ');
-  const chosenGame = gameNames[choice];
+  const gameName = gameNames[choice];
+  const chosenGame = games[gameName];
 
   if (chosenGame === undefined) {
-    console.log(`Bye-Bye, ${userName}!`);
+    console.log('Bye-Bye!');
     return false;
   }
 
-  games[chosenGame](userName);
-  readLineSync.keyInPause('Press any key to continue');
-  return launchGame(userName);
+  return launchGame(chosenGame(userName));
 };
 
 export default launchGame;
