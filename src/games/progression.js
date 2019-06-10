@@ -5,8 +5,6 @@ import createGame from '..';
 const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 
-// Game data generator description BEGIN
-
 const generateGameData = () => {
   const initialValue = random(100);
   const progressionStep = random(1, 10);
@@ -17,15 +15,11 @@ const generateGameData = () => {
   for (let i = 0; i < progressionLength; i += 1) {
     progression[i] = initialValue + i * progressionStep;
   }
-
   const rightAnswer = progression[hiddenElementIndex];
   progression[hiddenElementIndex] = '..';
-
   const question = progression.join(' ');
 
   return cons(question, String(rightAnswer));
 };
-
-// Game data generator description END
 
 export default userName => createGame(description, generateGameData, userName);

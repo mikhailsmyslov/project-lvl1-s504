@@ -1,5 +1,4 @@
 import readLineSync from 'readline-sync';
-
 import brainEven from './games/even';
 import brainCalc from './games/calc';
 import brainGSD from './games/gcd';
@@ -30,7 +29,6 @@ const launchGame = (userName) => {
     console.log('Bye-Bye!');
     return false;
   }
-
   return launchGame(chosenGame(userName));
 };
 
