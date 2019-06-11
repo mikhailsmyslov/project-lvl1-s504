@@ -7,9 +7,7 @@ export default (description, generateGameData, userNameParameter) => {
   console.clear();
   console.log('Wellcome to the Brain Games!');
 
-  const userName = userNameParameter === undefined
-    ? readlineSync.question('May I have your name?\n> ')
-    : userNameParameter;
+  const userName = userNameParameter || readlineSync.question('May I have your name?\n> ');
   console.log(`\nHello, ${userName}!\n`);
 
   console.log(`${description}\n`);

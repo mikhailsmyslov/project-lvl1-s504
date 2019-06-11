@@ -22,8 +22,7 @@ const launchGame = (userName) => {
   console.log('Wellcome to the Brain Games!');
 
   const choice = readLineSync.keyInSelect(gameNames, 'Please, choose a game to play: ');
-  const gameName = gameNames[choice];
-  const chosenGame = games[gameName];
+  const chosenGame = games[gameNames[choice]];
 
   if (chosenGame === undefined) {
     console.log('Bye-Bye!');
