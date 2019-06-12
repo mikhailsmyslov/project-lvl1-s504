@@ -4,7 +4,6 @@ ______________________
 
 [![Build Status](https://travis-ci.com/mikhailsmyslov/project-lvl1-s504.svg?branch=master)](https://travis-ci.com/mikhailsmyslov/project-lvl1-s504)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5e1c43ecb75edccff54d/maintainability)](https://codeclimate.com/github/mikhailsmyslov/project-lvl1-s504/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/5e1c43ecb75edccff54d/test_coverage)](https://codeclimate.com/github/mikhailsmyslov/project-lvl1-s504/test_coverage)
 
 ### About
 My first project on [Hexlet](https://ru.hexlet.io)
@@ -37,4 +36,5 @@ You can also launch games without the main menu by using `brain-even`, `brain-ca
 - 2.2.5 - readme updated;
 - 3.0.0 - Architecture modified, corrections according to mentor's remarks;
 - 3.1.0 - corrections according to mentor's remarks;
-- 3.1.1 - corrections according to mentor's remarks;
+- 3.1.2 - corrections according to mentor's remarks;
+- 3.1.2 - corrections according to mentor's remarks;
