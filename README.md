@@ -10,16 +10,16 @@ My first project on [Hexlet](https://ru.hexlet.io)
 
 ### Installation
 `npm install brain-games-s504 -g`
-[![asciicast](https://asciinema.org/a/m0iJNxnQN2dXJ4oCENikFvMBd.svg)](https://asciinema.org/a/m0iJNxnQN2dXJ4oCENikFvMBd)
+[![asciicast](https://asciinema.org/a/YIemfwS19EQNnWj0ueHIzNF16.svg)](https://asciinema.org/a/YIemfwS19EQNnWj0ueHIzNF16)
 
 ### Playing
 `brain-games` - runs the main menu to choose a game.
 
-[![asciicast](https://asciinema.org/a/jokA7SqgoqC13KzAF644PiZkU.svg)](https://asciinema.org/a/jokA7SqgoqC13KzAF644PiZkU)
+[![asciicast](https://asciinema.org/a/sQ3fiPlNl1aeNd7lfKVrHThWI.svg)](https://asciinema.org/a/sQ3fiPlNl1aeNd7lfKVrHThWI)
 
 You can also launch games without the main menu by using `brain-even`, `brain-calc`, `brain-gcd`, `brain-prog`, `brain-prime`.
 
-[![asciicast](https://asciinema.org/a/qoSfu5wfsYbUsCqqzD7KOUyAS.svg)](https://asciinema.org/a/qoSfu5wfsYbUsCqqzD7KOUyAS)
+[![asciicast](https://asciinema.org/a/QTVWDeu3c5qtWrj7HrpMo130v.svg)](https://asciinema.org/a/QTVWDeu3c5qtWrj7HrpMo130v)
 
 ### History
 - 1.0.0 - Original;
