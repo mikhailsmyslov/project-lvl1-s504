@@ -39,3 +39,4 @@ You can also launch games without the main menu by using `brain-even`, `brain-ca
 - 3.1.2 - corrections according to mentor's remarks;
 - 3.1.2 - corrections according to mentor's remarks;
 - 3.1.3 - facade for games selection added;
+- 3.2.0 - internall realization modified for some modules;

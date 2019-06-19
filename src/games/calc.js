@@ -25,4 +25,4 @@ const generateGameData = () => {
   return cons(question, String(rightAnswer));
 };
 
-export default userName => createGame(description, generateGameData, userName);
+export default createGame(description, generateGameData);

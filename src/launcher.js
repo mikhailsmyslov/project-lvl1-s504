@@ -2,18 +2,22 @@ import readLineSync from 'readline-sync';
 import games from './games';
 
 
-const makeLoop = (userName) => {
-  if (userName) readLineSync.keyInPause('Press any key to continue');
-
+const makeLoop = (userNameParameter) => {
   console.clear();
   console.log('Wellcome to the Brain Games!');
 
-  const gameIndex = readLineSync.keyInSelect(games.names, 'Please, choose a game: ');
-  const choosenGame = games.names[gameIndex];
+  const userName = userNameParameter || readLineSync.question('May I have your name?\n> ');
 
-  return !choosenGame
-    ? console.log('Bye-Bye!')
-    : makeLoop(games.select(choosenGame).launchAs(userName));
+  const gameName = games.names[
+    readLineSync.keyInSelect(games.names, 'Please, choose a game: ')
+  ];
+
+  if (!gameName) return console.log('Bye-Bye!');
+
+  games.select(gameName).launchAs(userName);
+
+  readLineSync.keyInPause('Press any key to continue');
+  return makeLoop(userName);
 };
 
 export default makeLoop;

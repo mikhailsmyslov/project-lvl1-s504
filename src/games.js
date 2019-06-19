@@ -4,35 +4,25 @@ import brainGsd from './games/gcd';
 import brainProg from './games/progression';
 import brainPrime from './games/prime';
 
-const gameNames = [
-  'Is even?',
-  'Calculate expression',
-  'Greater Common Divider',
-  'Arithmetic progression',
-  'Prime numbers',
-];
+const games = {
+  'Is even?': brainEven,
+  'Calculate expression': brainCalc,
+  'Greater Common Divider': brainGsd,
+  'Arithmetic progression': brainProg,
+  'Prime numbers': brainPrime,
+};
+
+const gameNames = Object.keys(games);
 
 class Games {
-  constructor(gameName) {
-    this.game = gameName;
+  constructor(game) {
+    this.games = games;
+    this.game = game;
     this.names = gameNames;
   }
 
   select(name) {
-    switch (name) {
-      case this.names[0]:
-        return new Games(brainEven);
-      case this.names[1]:
-        return new Games(brainCalc);
-      case this.names[2]:
-        return new Games(brainGsd);
-      case this.names[3]:
-        return new Games(brainProg);
-      case this.names[4]:
-        return new Games(brainPrime);
-      default:
-        return new Games(() => console.log('No such game!'));
-    }
+    return new Games(this.games[name]);
   }
 
   launchAs(userName) {
