@@ -22,9 +22,11 @@ export default (description, generateGameData) => (userNameParameter) => {
     const answer = readLineSync.question('\nYour answer:\n> ');
     if (answer !== rightAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
-      return console.log(`\nLet's try again, ${userName}!\n`);
+      console.log(`\nLet's try again, ${userName}!\n`);
+      return false;
     }
     console.log('Correct!\n');
   }
-  return console.log(`Congratulations, ${userName}!\n`);
+  console.log(`Congratulations, ${userName}!\n`);
+  return true;
 };
